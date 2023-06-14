@@ -10,6 +10,7 @@
         "test:ci": "jest --ci",
         "lint": "next lint",
         "format": "next prettier --write",
+        "check-typescript": "tsc --noEmit",
         "prepare": "husky install"
     },
     "dependencies": {

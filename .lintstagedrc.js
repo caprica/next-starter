@@ -8,6 +8,9 @@ const prettierCommand = (filenames) =>
 const eslintCommand = (filenames) =>
     `next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ')}`
 
+const checkTypescriptCommand = () =>
+    `npm run check-typescript`
+
 module.exports = {
-    '*.{js,jsx,ts,tsx}': [prettierCommand, eslintCommand],
+    '*.{ts,tsx}': [prettierCommand, eslintCommand, checkTypescriptCommand],
 }
